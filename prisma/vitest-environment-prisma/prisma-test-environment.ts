@@ -9,7 +9,7 @@ const prisma = new PrismaClient()
 
 function generateDatabaseURL(schema: string) {
   if (!process.env.DATABASE_URL) {
-    throw new Error('Please provide a DATABASE_URL environment variable.')
+    throw new Error('Por favor, preencha a variável DATABSE_URL.')
   }
 
   const url = new URL(process.env.DATABASE_URL)
@@ -25,7 +25,7 @@ export default <Environment>{
     const schema = randomUUID()
     const databaseURL = generateDatabaseURL(schema)
 
-    process.env.DATABASE_RUL = databaseURL
+    process.env.DATABASE_URL = databaseURL
 
     execSync('npx prisma migrate deploy')
 
@@ -34,7 +34,6 @@ export default <Environment>{
         await prisma.$executeRawUnsafe(
           `DROP SCHEMA IF EXISTS "${schema}" CASCADE`,
         )
-
         await prisma.$disconnect()
       },
     }
