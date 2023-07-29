@@ -1,6 +1,29 @@
-# App
+# GymPass
 
-GymPass style app.
+## 🎯 Sobre
+
+O projeto GymPass tem como objetivo o usuário encontrar uma academia perto dele para fazer o check-in.
+
+## 🖥️ Tecnologias
+
+* NodeJS
+* Typescript
+* Fastify
+* Docker
+* Prisma
+* Vitest
+
+## 😁 Como utilizar
+
+* `npm install` - Para instalar as dependências`
+* `docker compose up -d` - Para criar um container no docker
+* `npm run test` - Para rodar testes unitários
+* `npm run test:e2e` - Para rodar testes de integração
+* `npm run dev` - Para rodar a aplicação em desenvolvimento
+* `npm run build` - Para fazer o build
+* `npm start` - Para rodar a aplicação em produção
+
+---
 
 ## RFs (Requisitos funcionais)
 
